@@ -1,4 +1,4 @@
-# Repositório destinado a armazenar os conteúdo aplicado em sala de aula para a turma:
+# Repositório destinado a armazenar os conteúdo aplicados em sala de aula para a turma:
 
 Curso: Análise e Desenvolvimento de Sistemas<br/>
 Disciplina: Linguagem de Programação III<br/>
