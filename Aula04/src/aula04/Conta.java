@@ -9,13 +9,17 @@ package aula04;
  *
  * @author alex.lopes
  */
-public class Aula04 {
+public class Conta {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public String numero;
+    public double saldo;
+    public String agencia;
+    public String titular;
+
+    public void Exibir() {
+
+        System.out.println("Número: " + numero + " saldo:" + saldo);
+
     }
-    
+
 }
