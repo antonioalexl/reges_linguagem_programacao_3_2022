@@ -1,10 +1,10 @@
 # Repositório destinado a armazenar os conteúdo aplicado em sala de aula para a turma:
 
-Curso: Análise e Desenvolvimento de Sistemas
-Disciplina: Linguagem de Programação III
-Prof. Antonio Alex Lopes
-Carga Horária: 60 H/A.
-Série: 3° Termo Noturno
-Ano: 2022/1º Semestre
+Curso: Análise e Desenvolvimento de Sistemas<br/>
+Disciplina: Linguagem de Programação III<br/>
+Prof. Antonio Alex Lopes<br/>
+Carga Horária: 60 H/A.<br/>
+Série: 3° Termo Noturno<br/>
+Ano: 2022/1º Semestre<br/>
 
 
