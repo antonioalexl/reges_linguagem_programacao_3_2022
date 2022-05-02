@@ -67,6 +67,8 @@ public class Principal {
          f.add(BorderLayout.EAST, botoes[3]);
          f.add(BorderLayout.CENTER, botoes[4]);
          
+         
+         
          /*JButton button = new JButton("Button 1 (PAGE_START)");
         f.add(button, BorderLayout.PAGE_START);
 
