@@ -4,21 +4,40 @@
  */
 package br.com.superreges.modelo;
 
+import java.util.Calendar;
+
 /**
  *
  * @author USER
  */
-public class Funcionario {
+public class Funcionario extends Pessoa {
+
+      
     
-    
-    private String nome;
-    private Endereco endereco;
     private String numeroCartaoPonto;
+    
+    
+  
+    public Funcionario(String numeroCartaoPonto, String nome, Calendar dataNascimento, String documento, String telefone, String email, Endereco endereco) {
+        super(nome, dataNascimento, documento, telefone, email, endereco);
+        this.numeroCartaoPonto = numeroCartaoPonto;
+    }
+
+    public String getNumeroCartaoPonto() {
+        return numeroCartaoPonto;
+    }
+
+    public void setNumeroCartaoPonto(String numeroCartaoPonto) {
+        this.numeroCartaoPonto = numeroCartaoPonto;
+    }
+
+    /*private String nome;
+    private Endereco endereco;   
     private String cpf;
     private String telefone;
-    private String email;
+    private String email;*/
 
-    public String getNome() {
+ /* public String getNome() {
         return nome;
     }
 
@@ -64,6 +83,5 @@ public class Funcionario {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-    
+    }*/
 }

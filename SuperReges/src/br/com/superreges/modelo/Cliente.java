@@ -10,18 +10,37 @@ import java.util.Calendar;
  *
  * @author NB004
  */
-public class Cliente {
+public class Cliente extends Pessoa {
 
-    private String nome;
+    
+    private String cartaoFidelidade;
+    
+    
+    
+    public Cliente(String nome, Calendar dataNascimento, String documento, 
+            String telefone, String email, Endereco endereco, String cartaoFidelidade)
+    {
+       
+        super(nome, dataNascimento, documento, telefone, email, endereco);
+        this.cartaoFidelidade = cartaoFidelidade;
+              
+        
+    }
+    
+    
+    
+   /* private String nome;
     private Calendar dataNascimento;
     private String cpf;
     private String telefone;
     private String email;
-    private Endereco endereco;
+    private Endereco endereco;*/
+    
+    
     //analisar depois...
 
-    public void setNome(String value) {
-        this.nome = value;
+    /*public void setNome(String value) {
+        nome = value;
     }
 
     public String getNome() {
@@ -66,5 +85,13 @@ public class Cliente {
 
     public Endereco getEndereco() {
         return this.endereco;
+    }*/
+
+    public String getCartaoFidelidade() {
+        return cartaoFidelidade;
+    }
+
+    public void setCartaoFidelidade(String cartaoFidelidade) {
+        this.cartaoFidelidade = cartaoFidelidade;
     }
 }
