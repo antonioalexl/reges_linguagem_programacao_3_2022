@@ -4,16 +4,41 @@
  */
 package br.com.superreges.modelo;
 
+import java.util.Calendar;
+
 /**
  *
  * @author NB004
  */
-public class Fornecedor {
+public class Fornecedor extends Pessoa {
     
     
-    private String nome;
+    private String representacao; //marcas que o fornecedor representa    
+    
+    
+     public Fornecedor(String nome, Calendar dataNascimento, String documento, 
+            String telefone, String email, Endereco endereco, String representacao)
+    {
+       
+        super(nome, dataNascimento, documento, telefone, email, endereco);
+        this.representacao = representacao;
+              
+        
+    }
+    
+    
+    
+     public String getRepresentacao() {
+        return representacao;
+    }
+
+    public void setRepresentacao(String representacao) {
+        this.representacao = representacao;
+    }
+
+   /* private String nome;
     private String cnpj;
-    private String representacao; //marcas que o fornecedor representa
+    
     private String email;
     private String telefone;    
     private Endereco endereco;
@@ -64,7 +89,7 @@ public class Fornecedor {
 
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
-    }
+    }*/
     
   
 }

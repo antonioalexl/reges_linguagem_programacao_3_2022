@@ -20,9 +20,13 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       /* JFrame frame = new JFrame();
+        
+       /*JFrame frame = new JFrame();
+       
         frame.setSize(400, 400);
+        
         TableModel dataModel = new AbstractTableModel() {
+            
             public int getColumnCount() {
                 return 10;
             }
@@ -37,15 +41,17 @@ public class Principal {
         JScrollPane scrollpane = new JScrollPane(table);
         frame.add(scrollpane);
         frame.setVisible(true);*/
+        
+        
        
        ExemploTabela exemplo = new ExemploTabela();
        exemplo.abrirTela();
                
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        /*java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new FrameTabela().setVisible(true);
             }
-        });
+        });*/
         
         
     }

@@ -88,7 +88,7 @@ public class Venda {
         System.out.println("Venda: " + this.numeroVenda);        
         System.out.println("Cliente:");
         System.out.println(this.getCliente().getNome());
-        System.out.println(this.getCliente().getCpf());
+        System.out.println(this.getCliente().getDocumento());
         
         System.out.println("----------Itens--------");
         

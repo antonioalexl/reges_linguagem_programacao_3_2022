@@ -13,8 +13,18 @@ import java.util.Calendar;
  */
 public class Principal {
 
+    
     public static void main(String[] args) {
+    
         
+        
+               
+    }
+    
+    
+   /* public static void main(String[] args) {
+        
+        /*
         Cliente cliente = new Cliente();
         cliente.setNome("Alex Lopes");
         cliente.setCpf("3334616554");
@@ -77,29 +87,29 @@ public class Principal {
         
         
         /*CRIAR O OBJETO VENDA*/
-        Venda venda = new Venda();
+       /* Venda venda = new Venda();
         venda.setCliente(cliente);
         venda.setNumeroNota(123456);
-        venda.setNumeroVenda(123);
+        venda.setNumeroVenda(123);*/
         
         /*CRIAR O OBJETO ITEM 1*/
-        ItemVenda item1 = new ItemVenda();
+        /*ItemVenda item1 = new ItemVenda();
         item1.setProduto(prod);
-        item1.setQuantidade(30);
+        item1.setQuantidade(30);*/
         
         /*CRIAR O OBJETO ITEM 2*/
-        ItemVenda item2 = new ItemVenda();
+       /* ItemVenda item2 = new ItemVenda();
         item2.setProduto(prod1);
-        item2.setQuantidade(20);
+        item2.setQuantidade(20);*/
         
         //CRIA UMA LISTA DE ITENS
-        ArrayList<ItemVenda> itens = new ArrayList<ItemVenda>();
+        /*ArrayList<ItemVenda> itens = new ArrayList<ItemVenda>();
         itens.add(item1);
         itens.add(item2);
         
         venda.setItens(itens);
         
-        venda.imprimir();
+        venda.imprimir();*/
 
-    }
+    //}
 }

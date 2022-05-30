@@ -48,7 +48,7 @@ public class ExemploTabela extends JFrame {
         setSize(500, 120);
         setVisible(true);
         
-        Object teste = data[0][2];
+        
         
         
     }

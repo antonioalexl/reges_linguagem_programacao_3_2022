@@ -118,25 +118,23 @@ public class FrameTabela extends javax.swing.JFrame {
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
 
+        
         if (totalLinhas <= 3) {
-
-            // TODO add your handling code here:
-            String nome = txtNome.getText();
-            String telefone = txtTelefone.getText();
-            String email = txtEmail.getText();
-
-            //Colocando os dados na tabela
-            /*      tabelaCadastro.setValueAt(nome, 0, 0);
-        tabelaCadastro.setValueAt(telefone, 0, 1);
-        tabelaCadastro.setValueAt(email, 0, 2);*/
-            //Colocando os dados na tabela
-            tabelaCadastro.setValueAt(nome, totalLinhas, 0);
-            tabelaCadastro.setValueAt(telefone, totalLinhas, 1);
-            tabelaCadastro.setValueAt(email, totalLinhas, 2);
-
-            totalLinhas += 1;
-        } else {
-            JOptionPane.showMessageDialog(null, "Não é possível inserir mais clientes");
+            
+        
+        
+        String nome = txtNome.getText();
+        String telefone = txtTelefone.getText();
+        String email = txtEmail.getText();
+        
+        
+        
+        
+        tabelaCadastro.setValueAt(nome, totalLinhas, 0);
+        tabelaCadastro.setValueAt(telefone, totalLinhas, 1);
+        tabelaCadastro.setValueAt(email, totalLinhas, 2);
+        
+        totalLinhas +=1;
         }
 
     }//GEN-LAST:event_btnSalvarActionPerformed
