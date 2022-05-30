@@ -4,11 +4,15 @@
  */
 package aula15.exemplos;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author alex.lopes
  */
 public class FrameTabela extends javax.swing.JFrame {
+
+    int totalLinhas = 0;
 
     /**
      * Creates new form FrameTabela
@@ -113,23 +117,33 @@ public class FrameTabela extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-        // TODO add your handling code here:
-        String nome = txtNome.getText();
-        String telefone = txtTelefone.getText();
-        String email = txtEmail.getText();
-        
-        
-        
-        
-        tabelaCadastro.setValueAt(nome, 0, 0);
+
+        if (totalLinhas <= 3) {
+
+            // TODO add your handling code here:
+            String nome = txtNome.getText();
+            String telefone = txtTelefone.getText();
+            String email = txtEmail.getText();
+
+            //Colocando os dados na tabela
+            /*      tabelaCadastro.setValueAt(nome, 0, 0);
         tabelaCadastro.setValueAt(telefone, 0, 1);
-        tabelaCadastro.setValueAt(email, 0, 2);
+        tabelaCadastro.setValueAt(email, 0, 2);*/
+            //Colocando os dados na tabela
+            tabelaCadastro.setValueAt(nome, totalLinhas, 0);
+            tabelaCadastro.setValueAt(telefone, totalLinhas, 1);
+            tabelaCadastro.setValueAt(email, totalLinhas, 2);
+
+            totalLinhas += 1;
+        } else {
+            JOptionPane.showMessageDialog(null, "Não é possível inserir mais clientes");
+        }
+
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     /**
      * @param args the command line arguments
      */
-  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSalvar;
