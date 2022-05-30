@@ -12,6 +12,7 @@ import java.util.Calendar;
  */
 public abstract class Pessoa {
 
+    protected String id;
     protected String nome;
     protected Calendar dataNascimento;
     //private String cpf;
@@ -22,9 +23,10 @@ public abstract class Pessoa {
     protected Endereco endereco;
     
         
-    public Pessoa(String nome, Calendar dataNascimento, String documento, 
+    public Pessoa(String id, String nome, Calendar dataNascimento, String documento, 
             String telefone, String email, Endereco endereco)
     {
+        this.id = id;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.documento = documento;
@@ -35,6 +37,9 @@ public abstract class Pessoa {
     }
     
     
+     public String getId() {
+        return id;
+    }
     
     public String getNome() {
         return nome;

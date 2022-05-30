@@ -18,6 +18,8 @@ public class Endereco {
    private String bairro;
    private String cep;
 
+   
+   
     public String getLogradouro() {
         return logradouro;
     }

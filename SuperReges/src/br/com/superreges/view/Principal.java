@@ -4,6 +4,11 @@
  */
 package br.com.superreges.view;
 
+import java.awt.Dimension;
+import java.awt.Insets;
+import java.awt.Toolkit;
+import javax.swing.JFrame;
+
 /**
  *
  * @author NB004
@@ -15,8 +20,8 @@ public class Principal {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-              /* Set the Nimbus look and feel */
+
+        /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -42,10 +47,31 @@ public class Principal {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JanelaPrincipal().setVisible(true);
+
+                JanelaPrincipal principal = new JanelaPrincipal();
+                //  principal.pack();      
+
+                /*Insets in = Toolkit.getDefaultToolkit().getScreenInsets(principal.getGraphicsConfiguration());
+
+                Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
+
+                int width = d.width - (in.left + in.top);
+                int height = d.height - (in.top + in.bottom);
+
+                principal.setSize(width, height);
+                principal.setLocation(in.left, in.top);*/
+
+                principal.setVisible(true);
+
+                // Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+                //double width = screenSize.getWidth();
+                //double height = screenSize.getHeight();
+                // principal.setSize(screenSize);
+                //new JanelaPrincipal().setVisible(true);
+                //principal.setExtendedState();
             }
         });
-        
+
     }
-    
+
 }

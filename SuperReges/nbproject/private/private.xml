@@ -3,16 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/NB004/Desktop/reges_fontes/reges_linguagem_programacao_3_2022/SuperReges/src/br/com/superreges/modelo/Cliente.java</file>
-            <file>file:/C:/Users/NB004/Desktop/reges_fontes/reges_linguagem_programacao_3_2022/SuperReges/src/br/com/superreges/modelo/Pessoa.java</file>
-            <file>file:/C:/Users/NB004/Desktop/reges_fontes/reges_linguagem_programacao_3_2022/SuperReges/src/br/com/superreges/view/FrmCliente.java</file>
-            <file>file:/C:/Users/NB004/Desktop/reges_fontes/reges_linguagem_programacao_3_2022/SuperReges/src/br/com/superreges/modelo/Endereco.java</file>
-            <file>file:/C:/Users/NB004/Desktop/reges_fontes/reges_linguagem_programacao_3_2022/SuperReges/src/br/com/superreges/modelo/Principal.java</file>
-            <file>file:/C:/Users/NB004/Desktop/reges_fontes/reges_linguagem_programacao_3_2022/SuperReges/src/br/com/superreges/modelo/Funcionario.java</file>
-            <file>file:/C:/Users/NB004/Desktop/reges_fontes/reges_linguagem_programacao_3_2022/SuperReges/src/br/com/superreges/view/Principal.java</file>
-            <file>file:/C:/Users/NB004/Desktop/reges_fontes/reges_linguagem_programacao_3_2022/SuperReges/src/br/com/superreges/view/JanelaPrincipal.java</file>
-            <file>file:/C:/Users/NB004/Desktop/reges_fontes/reges_linguagem_programacao_3_2022/SuperReges/src/br/com/superreges/modelo/Fornecedor.java</file>
-            <file>file:/C:/Users/NB004/Desktop/reges_fontes/reges_linguagem_programacao_3_2022/SuperReges/src/br/com/superreges/modelo/Venda.java</file>
+            <file>file:/C:/Users/Administrador/Documents/NetBeansProjects/reges_linguagem_programacao_3_2022/SuperReges/src/br/com/superreges/modelo/Endereco.java</file>
+            <file>file:/C:/Users/Administrador/Documents/NetBeansProjects/reges_linguagem_programacao_3_2022/SuperReges/src/br/com/superreges/view/FrmCliente.java</file>
+            <file>file:/C:/Users/Administrador/Documents/NetBeansProjects/reges_linguagem_programacao_3_2022/SuperReges/src/br/com/superreges/modelo/Fornecedor.java</file>
+            <file>file:/C:/Users/Administrador/Documents/NetBeansProjects/reges_linguagem_programacao_3_2022/SuperReges/src/br/com/superreges/modelo/Pessoa.java</file>
+            <file>file:/C:/Users/Administrador/Documents/NetBeansProjects/reges_linguagem_programacao_3_2022/SuperReges/src/br/com/superreges/modelo/Funcionario.java</file>
+            <file>file:/C:/Users/Administrador/Documents/NetBeansProjects/reges_linguagem_programacao_3_2022/SuperReges/src/br/com/superreges/view/JanelaPrincipal.java</file>
+            <file>file:/C:/Users/Administrador/Documents/NetBeansProjects/reges_linguagem_programacao_3_2022/SuperReges/src/br/com/superreges/view/Principal.java</file>
+            <file>file:/C:/Users/Administrador/Documents/NetBeansProjects/reges_linguagem_programacao_3_2022/SuperReges/src/br/com/superreges/modelo/Cliente.java</file>
         </group>
     </open-files>
 </project-private>
