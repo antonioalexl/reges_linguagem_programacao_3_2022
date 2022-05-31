@@ -45,6 +45,8 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        desktopPane.setBackground(new java.awt.Color(153, 0, 255));
+
         fileMenu.setMnemonic('f');
         fileMenu.setText("Cadastros");
 

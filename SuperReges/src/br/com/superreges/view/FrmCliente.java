@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -24,6 +25,10 @@ import javax.swing.table.DefaultTableModel;
 public class FrmCliente extends javax.swing.JInternalFrame {
 
     ArrayList<Cliente> lstCliente;
+
+    boolean modoAlterarDeletar = false;
+    String id = "";
+    int indiceLista = 0;
 
     public FrmCliente() {
 
@@ -90,6 +95,11 @@ public class FrmCliente extends javax.swing.JInternalFrame {
         });
 
         btnExcluir.setText("Excluir");
+        btnExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -316,8 +326,26 @@ public class FrmCliente extends javax.swing.JInternalFrame {
         txtUf.setEnabled(false);
 
         //DESABILITAR OS BOTÕES
-        btnSalvar.setEnabled(true);
+        btnSalvar.setEnabled(false);
         btnExcluir.setEnabled(false);
+
+    }
+
+    private void habilitarCampos() {
+
+        txtNome.setEnabled(true);
+        txtNome.setEnabled(true);
+        txtDocumento.setEnabled(true);
+        txtEmail.setEnabled(true);
+        txtFidelidade.setEnabled(true);
+        txtTelefone.setEnabled(true);
+        txtDataNascimento.setEnabled(true);
+        txtCep.setEnabled(true);
+        txtRua.setEnabled(true);
+        txtCidade.setEnabled(true);
+        txtBairro.setEnabled(true);
+        txtNumero.setEnabled(true);
+        txtUf.setEnabled(true);
 
     }
 
@@ -335,25 +363,40 @@ public class FrmCliente extends javax.swing.JInternalFrame {
             Logger.getLogger(FrmCliente.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        /*
-        public Endereco(String logradouro, String cidade, String numero, String uf, 
-           String bairro, String cep)
-         */
         Endereco endereco = new Endereco(txtRua.getText(), txtCidade.getText(), txtNumero.getText(), txtUf.getText(),
                 txtBairro.getText(), txtCep.getText());
 
-        UUID id = java.util.UUID.randomUUID();
+        String idCli = "";
 
-        Cliente cliente = new Cliente(id.toString(), txtNome.getText(), cal, txtDocumento.getText(), txtTelefone.getText(),
+        if (this.modoAlterarDeletar == true) {
+            idCli = this.id;
+
+        } else {
+            idCli = java.util.UUID.randomUUID().toString();
+        }
+
+        Cliente cliente = new Cliente(idCli, txtNome.getText(), cal, txtDocumento.getText(), txtTelefone.getText(),
                 txtEmail.getText(), endereco, txtFidelidade.getText());
 
-        lstCliente.add(cliente);
+        this.modoNovo();
 
+        if (this.modoAlterarDeletar == true) {
+            //ALTERO O VALOR NA POSIÇÃO DA LISTA
+            lstCliente.set(this.indiceLista, cliente);
+            btnNovo.setEnabled(true);
+
+        } else {
+            lstCliente.add(cliente);
+        }        
+        this.modoAlterarDeletar = false;
+        
         this.carregarTabela();
 
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void tableClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableClienteMouseClicked
+
+        this.modoAlterarDeletar = true;
 
         //PEGA A LINHA SELECIONADA
         int row = this.tableCliente.getSelectedRow();
@@ -361,10 +404,14 @@ public class FrmCliente extends javax.swing.JInternalFrame {
         //RECUPERA O VALOr DA COLUNA ID ESTA NA 0
         String idCliente = (String) this.tableCliente.getValueAt(row, 0);
 
+        //GUARDA O ID PARA ALTERAR/REMOVER
+        this.id = idCliente;
+
         int indice = 0;
 
         //RECUPERAR POR ID
         Cliente cliente = null;
+
         for (int i = 0; i < lstCliente.size(); i++) {
 
             if (lstCliente.get(i).getId().equals(idCliente)) {
@@ -373,8 +420,10 @@ public class FrmCliente extends javax.swing.JInternalFrame {
                 indice = i;
                 break;
             }
-        }               
-               
+        }
+
+        this.indiceLista = indice;
+
         txtNome.setText(cliente.getNome());
         txtEmail.setText(cliente.getEmail());
         txtFidelidade.setText(cliente.getCartaoFidelidade());
@@ -392,34 +441,43 @@ public class FrmCliente extends javax.swing.JInternalFrame {
         txtUf.setText(cliente.getEndereco().getUf());
         txtCidade.setText(cliente.getEndereco().getCidade());
 
-        //lstCliente.remove(0);
-        //remover linha
-        //array = ArrayUtils.remove(array, index);
-        //btnSalvar.setText("Alterar");
+        this.habilitarCampos();
+
+        btnSalvar.setEnabled(true);
+
+        btnNovo.setEnabled(false);
+
+        btnExcluir.setEnabled(true);
+
+        btnSalvar.setText("Alterar");
 
     }//GEN-LAST:event_tableClienteMouseClicked
 
     private void btnNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoActionPerformed
 
         //HABILITAR OS CAMPOS
-        txtNome.setEnabled(true);
-        txtNome.setEnabled(true);
-        txtDocumento.setEnabled(true);
-        txtEmail.setEnabled(true);
-        txtFidelidade.setEnabled(true);
-        txtTelefone.setEnabled(true);
-        txtDataNascimento.setEnabled(true);
-        txtCep.setEnabled(true);
-        txtRua.setEnabled(true);
-        txtCidade.setEnabled(true);
-        txtBairro.setEnabled(true);
-        txtNumero.setEnabled(true);
-        txtUf.setEnabled(true);
-
+        this.habilitarCampos();
         //DESABILITAR OS BOTÕES
         btnSalvar.setEnabled(true);
-       
+
     }//GEN-LAST:event_btnNovoActionPerformed
+
+    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+
+        //// 0=yes, 1=no, 2=cancel
+        int input = JOptionPane.showConfirmDialog(null,
+                "Deseja realmente excluir?", "Atenção!!!", JOptionPane.YES_NO_OPTION);
+
+        if (input == 0) {
+
+            lstCliente.remove(this.indiceLista);
+
+            this.carregarTabela();
+
+        }
+        this.modoNovo();
+
+    }//GEN-LAST:event_btnExcluirActionPerformed
 
     private void carregarTabela() {
 
